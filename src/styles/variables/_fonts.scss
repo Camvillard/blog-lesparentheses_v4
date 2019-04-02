@@ -1,0 +1,36 @@
+/*----- VARIABLES : FONTS ----- */
+
+@import url("https://use.typekit.net/kzs6ilf.css");
+
+
+$body-font: 'futura-pt', sans-serif;
+$headers-font: 'futura-pt', sans-serif;
+$accent-font: 'gemeli-mono', serif;
+
+body {
+  font-family: $body-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headers-font;
+  color: $primary-color;
+}
+
+.accent-text, em {
+  font-family: $accent-font;
+}
+
+
+// font weights
+
+.text-strong {
+  font-weight: 700;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+
+.text-light {
+  font-weight: 300;
+}
