@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 // internal stuff
 import Header from "./header"
+import Footer from "./footer"
 
 
 // importing styles
@@ -35,11 +36,7 @@ const Layout = ({ children }) => (
         >
         <h3>{data.site.siteMetadata.description}</h3>
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          <Footer />
         </div>
       </>
     )}
