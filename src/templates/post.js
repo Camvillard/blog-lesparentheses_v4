@@ -1,6 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+
+import SEO from '../components/seo';
 import Layout from '../components/layout';
+
 import { extractTags } from '../helpers/extract-tags';
 
 const Post = ({ data }) => {
@@ -10,6 +13,7 @@ const Post = ({ data }) => {
   return(
     <Layout>
     <div>
+    <SEO title={`${post.title}`} keywords={[`gatsby`, `application`, `react`]} />
       <h1 dangerouslySetInnerHTML={{__html: post.title}} />
       <h3>
         date: {post.date} tags: {extractTags(post)}{' '}
