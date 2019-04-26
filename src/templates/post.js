@@ -13,7 +13,7 @@ const Post = ({ data }) => {
   return(
     <Layout>
     <div>
-    <SEO title={`${post.title}`} keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title={`${post.title}`} keywords={[`gatsby`, `application`, `react`]} id={post.slug ? `${post.slug}` : ''} />
       <h1 dangerouslySetInnerHTML={{__html: post.title}} />
       <h3>
         date: {post.date} tags: {extractTags(post)}{' '}
@@ -31,6 +31,7 @@ export const query = graphql`
       title
       date(formatString: "Do MMMM YYYY")
       content
+      slug
     }
   }
 `

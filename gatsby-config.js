@@ -1,13 +1,17 @@
 require('dotenv').config();
 
 module.exports = {
+  // all the meta for the website
   siteMetadata: {
     title: `les parentheses`,
     description: `histoires & ponctuation`,
-    author: `@gatsbyjs`,
+    author: `camille villard | cdltbisou`,
   },
   plugins: [
+  // Provides drop-in support for server rendering data added with React Helmet.
+  // React Helmet is a component which lets you control your document head using their React component.
     `gatsby-plugin-react-helmet`,
+    // A Gatsby source plugin for sourcing data into your Gatsby application from your local filesystem.
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -15,8 +19,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    //Creates ImageSharp nodes from image types that are supported by the Sharp image
+    //processing library and provides fields in their GraphQL types for processing your
+    //images in a variety of ways including resizing, cropping, and creating responsive images.
+    // https://www.gatsbyjs.org/packages/gatsby-transformer-sharp/?=trans
     `gatsby-transformer-sharp`,
+    // Exposes several image processing functions built on the Sharp image processing library.
+    // https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/
     `gatsby-plugin-sharp`,
+    // uses node-sass
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -30,6 +41,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    // plugin that allows us to fetch data from wordpress
     {
      resolve: `gatsby-source-wordpress`,
      options: {
@@ -49,10 +61,21 @@ module.exports = {
          "**/pages",
          "**/tags",
        ],
+      }
      },
+    // allows us to use svg as react component
+    // import Icon from '$PATH_FILE' and use it as a basic component
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/ // See below to configure properly
+        }
+      }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
   ],
+  // end of plugins
 }
