@@ -9,11 +9,13 @@ import { extractTags } from '../helpers/extract-tags';
 const Post = ({ data }) => {
 
   const post = data.wordpressPost
+  const featuredImage = post.featured_media.source_url
 
   return(
     <Layout>
     <div>
     <SEO title={`${post.title}`} keywords={[`gatsby`, `application`, `react`]} id={post.slug ? `${post.slug}` : ''} />
+      <img src={featuredImage} alt=""/>
       <h1 dangerouslySetInnerHTML={{__html: post.title}} />
       <h3>
         date: {post.date} tags: {extractTags(post)}{' '}
@@ -28,6 +30,9 @@ export default Post;
 export const query = graphql`
   query($id: String!) {
     wordpressPost(id: { eq: $id }) {
+      featured_media {
+        source_url
+      }
       title
       date(formatString: "Do MMMM YYYY")
       content

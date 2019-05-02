@@ -43,26 +43,28 @@ module.exports = {
     },
     // plugin that allows us to fetch data from wordpress
     {
-     resolve: `gatsby-source-wordpress`,
-     options: {
-       baseUrl: process.env.WORDPRESS_BASE_URL,
-       protocol: process.env.WORDPRESS_PROTOCOL,
-       hostingWPCOM: (process.env.WORDPRESS_HOSTING_WPCOM === 'true'),
-       useACF: (process.env.WORDPRESS_USE_ACF === 'true'),
-       verboseOutput: (process.env.WORDPRESS_VERBOSE_OUTPUT === 'true'),
-       auth: {
-         wpcom_app_clientSecret: process.env.WORDPRESS_CLIENT_SECRET,
-         wpcom_app_clientId: process.env.WORDPRESS_CLIENT_ID,
-         wpcom_user: process.env.WORDPRESS_USER,
-         wpcom_pass: process.env.WORDPRESS_PASSWORD,
-       },
-       includedRoutes: [
-         "**/posts",
-         "**/pages",
-         "**/tags",
-       ],
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        baseUrl: process.env.WORDPRESS_BASE_URL,
+        protocol: process.env.WORDPRESS_PROTOCOL,
+        hostingWPCOM: false,
+        useACF: true,
+        verboseOutput: true,
+        auth: {
+          wpcom_app_clientSecret: process.env.WORDPRESS_CLIENT_SECRET,
+          wpcom_app_clientId: process.env.WORDPRESS_CLIENT_ID,
+          wpcom_user: process.env.WORDPRESS_USER,
+          wpcom_pass: process.env.WORDPRESS_PASSWORD,
+        },
+        includedRoutes: [
+          "**/categories",
+          "**/posts",
+          "**/pages",
+          "**/tags",
+          "**/media",
+        ],
       }
-     },
+    },
     // allows us to use svg as react component
     // import Icon from '$PATH_FILE' and use it as a basic component
     {
