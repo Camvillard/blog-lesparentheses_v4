@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 
 
 // internal stuff
+import ArticleCard from '../components/article-card';
 
 // style
 
@@ -13,8 +14,13 @@ class Articles extends React.Component {
     return(
       <div>
       {data.edges.map( edge =>
-        <h3> {edge.node.title}</h3>
+        <h3 key={edge.node.id}> {edge.node.title} </h3>
       )}
+      <ArticleCard
+        title="prout"
+        url="/about"
+        excerpt="salut ceci est l'extrait du texte"
+      />
       <h4>total count:{data.totalCount}</h4>
       <p> first article : {data.edges[0].node.title}</p>
 
