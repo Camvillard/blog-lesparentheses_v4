@@ -1,11 +1,16 @@
 /*----- COMPONENTS : INSTAGRAM ----- */
 
 #instagram-footer {
+  background: $secondary-color;
+  padding: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
   .gatsby-image-wrapper {
-    max-width: 100%;
+    overflow: visible !important;
+    margin: 8px;
   }
+
 }
 
 

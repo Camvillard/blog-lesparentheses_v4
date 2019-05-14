@@ -17,9 +17,8 @@ const Layout = ({ children}) => {
 
   return (
     <div className="main-container">
-    <Header siteTitle="prout titre" />
+    <Header siteTitle={internalData.site} tagline={internalData.description} />
       <div>
-      <h3>site cool</h3>
         <main>{children}</main>
         <Footer />
       </div>

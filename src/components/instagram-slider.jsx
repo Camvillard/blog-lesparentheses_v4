@@ -18,8 +18,6 @@ const InstagramPhoto = (props) =>  {
 }
 
 
-
-
 const Instagram = () => (
   <StaticQuery
     query = { graphql`
@@ -46,24 +44,16 @@ const Instagram = () => (
       return(
         <div id="instagram-footer">
         {/* starting the loop in data from instagram  */}
-        { instaData.map( insta => <InstagramPhoto key={insta.node.id} fluid={insta.node.localFile.childImageSharp.fluid}  />)}
+        { instaData.map( insta => <InstagramPhoto
+          key={insta.node.id}
+          fluid={insta.node.localFile.childImageSharp.fluid}ç
+        />)}
         </div>
       )
     }}
   />
 )
 
-
-// class Footer extends React.Component {
-//   render() {
-//     const instagramData = this.props.data
-//     console.log(instagramData)
-//     return(
-//
-
-//     )
-//   }
-// }
 
 export default Instagram;
 
