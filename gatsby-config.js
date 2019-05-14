@@ -75,6 +75,15 @@ module.exports = {
         }
       }
     },
+    // plugin to access instagram account
+    {
+      resolve: 'gatsby-source-instagram',
+      options: {
+        username: 'cam_villard',
+        access_token: process.env.INSTAGRAM_TOKEN,
+        instagram_id: process.env.INSTAGRAM_ID,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',

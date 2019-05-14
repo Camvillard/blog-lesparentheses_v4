@@ -1,11 +1,12 @@
-/* ------ VARIABLES : BREAKPOINTS ------ */
+/*----- COMPONENTS : INSTAGRAM ----- */
 
-
-$xsm-screen: 576px;
-$sm-screen: 768px;
-$md-screen: 992px;
-$lg-screen: 1200px;
-$hg-screen: 1440px;
+#instagram-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  .gatsby-image-wrapper {
+    max-width: 100%;
+  }
+}
 
 
 @media (min-width: $xsm-screen) {
@@ -15,6 +16,14 @@ $hg-screen: 1440px;
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
+  #instagram-footer {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    .gatsby-image-wrapper {
+      max-width: 100%;
+    }
+  }
+
 } // end of md-screen - 992px
 
 @media only screend and (min-width: $lg-screen) {
@@ -22,4 +31,3 @@ $hg-screen: 1440px;
 
 @media (min-width: $hg-screen) {
 } // end of hg-screen - 1440px
-
