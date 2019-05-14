@@ -5,16 +5,12 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
+import internalData from '../data/internal-data';
+
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} id="index-page" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/">Go to page 2</Link>
+    <SEO title="Home" keywords={internalData.seo} id="index-page" />
+    <h1>everything is a work in progress.</h1>
   </Layout>
 )
 

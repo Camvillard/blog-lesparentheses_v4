@@ -5,6 +5,8 @@ import { graphql } from 'gatsby';
 
 // internal stuff
 import ArticleCard from '../components/article-card';
+import internalData from '../data/internal-data';
+import Layout from '../components/layout';
 
 // style
 
@@ -12,20 +14,18 @@ class Articles extends React.Component {
   render() {
     const data = this.props.data.allWordpressPost
     return(
-      <div>
-      {data.edges.map( edge =>
-        <h3 key={edge.node.id}> {edge.node.title} </h3>
-      )}
-      <ArticleCard
-        title="prout"
-        url="/about"
-        excerpt="salut ceci est l'extrait du texte"
-      />
-      <h4>total count:{data.totalCount}</h4>
-      <p> first article : {data.edges[0].node.title}</p>
-
-
-      </div>
+      <Layout>
+        {data.edges.map( edge =>
+          <h3 key={edge.node.id}> {edge.node.title} </h3>
+        )}
+        <ArticleCard
+          title="prout"
+          url="/about"
+          excerpt="salut ceci est l'extrait du texte"
+        />
+        <h4>total count:{data.totalCount}</h4>
+        <p> first article : {data.edges[0].node.title}</p>
+      </Layout>
     )
   }
 }
