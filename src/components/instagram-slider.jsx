@@ -43,11 +43,16 @@ const Instagram = () => (
       const instaData = window.innerWidth < 992 ? data.allInstaNode.edges.slice(0,4) : data.allInstaNode.edges
       return(
         <div id="instagram-footer">
-        {/* starting the loop in data from instagram  */}
-        { instaData.map( insta => <InstagramPhoto
-          key={insta.node.id}
-          fluid={insta.node.localFile.childImageSharp.fluid}ç
-        />)}
+
+          <div id="instagram-gallery">
+            {/* starting the loop in data from instagram  */}
+            { instaData.map( insta => <InstagramPhoto
+              key={insta.node.id}
+              fluid={insta.node.localFile.childImageSharp.fluid}
+            />)}
+          </div>
+          <a href="#">@cam_villard</a>
+
         </div>
       )
     }}

@@ -6,6 +6,7 @@ import React from 'react';
 import SEO from '../components/seo'
 
 // import aboutData from '../data/about-data'
+import internalData from '../data/internal-data';
 
 
 // styles
@@ -16,16 +17,13 @@ class AboutPage extends React.Component {
 
   handleClick() {
     const aboutContent = document.querySelector('#aboutcontent')
-    console.log(aboutContent)
-    // aboutContent.querySelector('#general')
-    // aboutContent.classList.toggle('hidden');
   }
 
 
   render() {
     return (
       <div id="about-page-container">
-      <SEO title="About" keywords={[`gatsby`, `application`, `react`]} id="about-page" />
+      <SEO title="Home" keywords={internalData.seo} id="index-page" />
       <h1 className="text-uppercase">about</h1>
 
       <div id="about-sections">
