@@ -13,13 +13,13 @@ import Footer from "./footer"
 // importing styles
 import '../styles/main.scss';
 
-const Layout = ({ children, data }) => {
+const Layout = ({ children}) => {
 
   return (
     <div className="main-container">
-    <Header siteTitle={internalData.site} />
+    <Header siteTitle="prout titre" />
       <div>
-      <h3>{internalData.description}</h3>
+      <h3>site cool</h3>
         <main>{children}</main>
         <Footer />
       </div>
@@ -35,13 +35,13 @@ Layout.propTypes = {
 
 export default Layout
 
-export const query = graphql`
-query siteQuery {
-  sitePage {
-    id
-    path
-  }
-}
-`
+// export const query = graphql`
+// query siteQuery {
+//   sitePage {
+//     id
+//     path
+//   }
+// }
+// `
 
 

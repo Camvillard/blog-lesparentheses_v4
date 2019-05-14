@@ -25,7 +25,7 @@ const Post = ({ data }) => {
 
       <div className="post-meta">
         <p className="date">{post.date}</p>
-        <p className="tags">{post.tags.map( tag => <Link to={`/tags/${tag.slug}`}>{tag.name}</Link> )}</p>
+        <p className="tags">{post.tags.map( tag => <Link key={tag.id} to={`/tags/${tag.slug}`}>{tag.name}</Link> )}</p>
       </div>
 
       <div dangerouslySetInnerHTML= {{__html: post.content}} />
@@ -56,6 +56,7 @@ export const query = graphql`
       tags {
         name
         slug
+        id
       }
     }
   }
