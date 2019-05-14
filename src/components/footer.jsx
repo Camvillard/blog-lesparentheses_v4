@@ -13,7 +13,7 @@ import Instagram from "./instagram-slider";
 class Footer extends React.Component {
   render() {
     return(
-      <div>
+      <footer id="footer" className="text-light">
       <Instagram />
         <div id="left-footer">
         © {new Date().getFullYear()} - les parentheses | tous droits réservés
@@ -21,7 +21,7 @@ class Footer extends React.Component {
         <div id="right-footer">
           fait avec mucho love par <a href="https://www.cdltbisou.com">cdltbisou</a>
         </div>
-      </div>
+      </footer>
     )
   }
 }
