@@ -40,7 +40,7 @@ const Instagram = () => (
     `}
     render = { data => {
       {/* take only 4 elements if it's on mobile */}
-      const instaData = window.innerWidth < 992 ? data.allInstaNode.edges.slice(0,4) : data.allInstaNode.edges
+      const instaData = data.allInstaNode.edges
       return(
         <div id="instagram-footer">
 
