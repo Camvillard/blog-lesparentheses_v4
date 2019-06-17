@@ -51,10 +51,10 @@ module.exports = {
         useACF: true,
         verboseOutput: true,
         auth: {
-          wpcom_app_clientSecret: process.env.WORDPRESS_CLIENT_SECRET,
-          wpcom_app_clientId: process.env.WORDPRESS_CLIENT_ID,
-          wpcom_user: process.env.WORDPRESS_USER,
-          wpcom_pass: process.env.WORDPRESS_PASSWORD,
+          wpcom_app_clientSecret: 'vb9tpu2nSV1UcSE0CsoGcXqwB9SNqpaadWIxEAydLw3cCUeb7vrGTg5q4D6gj9vL',
+          wpcom_app_clientId: '65512',
+          wpcom_user: 'lesparenthesesblog@gmail.com',
+          wpcom_pass: 'cdlTb!$0u201?GE',
         },
         includedRoutes: [
           "**/categories",
