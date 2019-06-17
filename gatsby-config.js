@@ -50,19 +50,19 @@ module.exports = {
         hostingWPCOM: false,
         useACF: true,
         verboseOutput: true,
-        auth: {
-          wpcom_app_clientSecret: 'vb9tpu2nSV1UcSE0CsoGcXqwB9SNqpaadWIxEAydLw3cCUeb7vrGTg5q4D6gj9vL',
-          wpcom_app_clientId: '65512',
-          wpcom_user: 'lesparenthesesblog@gmail.com',
-          wpcom_pass: 'cdlTb!$0u201?GE',
-        },
-        includedRoutes: [
-          "**/categories",
-          "**/posts",
-          "**/pages",
-          "**/tags",
-          "**/media",
-        ],
+        // auth: {
+        //   wpcom_app_clientSecret: 'vb9tpu2nSV1UcSE0CsoGcXqwB9SNqpaadWIxEAydLw3cCUeb7vrGTg5q4D6gj9vL',
+        //   wpcom_app_clientId: '65512',
+        //   wpcom_user: 'lesparenthesesblog@gmail.com',
+        //   wpcom_pass: 'cdlTb!$0u201?GE',
+        // },
+        // includedRoutes: [
+        //   "**/categories",
+        //   "**/posts",
+        //   "**/pages",
+        //   "**/tags",
+        //   "**/media",
+        // ],
       }
     },
     // allows us to use svg as react component
